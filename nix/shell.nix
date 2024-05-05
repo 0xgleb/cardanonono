@@ -9,37 +9,13 @@
 cabalProject:
 
 {
-  name = "plutus-tx-template";
-
-  packages = [
-  ];
-
-  # scripts = {
-  #   foo = {
-  #      description = "";
-  #      group = "general";
-  #      enabled = true;
-  #      exec = ''
-  #        echo "Hello, World!"
-  #      '';
-  #    };
-  # };
-
-  # env = {
-  #   KEY = "VALUE";
-  # };
-
-  shellHook = ''
-    # Custom shellHook
-  '';
+  name = "cardanonono";
+  packages = with pkgs; [ nil nixfmt ];
 
   preCommit = {
-    # cabal-fmt.enable = true;
-    # stylish-haskell.enable = true;
-    # fourmolu.enable = true;
-    # hlint.enable = true;
-    # editorconfig-checker.enable = true;
-    # nixpkgs-fmt.enable = true;
+    cabal-fmt.enable = true;
+    fourmolu.enable = true;
+    hlint.enable = true;
+    nixpkgs-fmt.enable = true;
   };
 }
- 
